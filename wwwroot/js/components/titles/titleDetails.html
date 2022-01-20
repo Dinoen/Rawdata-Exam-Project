@@ -1,0 +1,150 @@
+<div class="container-lg p-0 mt-5" data-bind="with: title()">
+  <!-- <div class="row">
+    <div class="col p-0">
+      <h1>MovieDB</h1>
+    </div>
+  </div> -->
+
+  <div class="container-fluid p-0">
+    <div class="movie-heroimg overflow-hidden" data-bind="style: { backgroundImage: 'url(\'' + omdbData.poster + '\')' }">
+    </div>
+  </div>
+
+  <div class="row movie-details">
+    <div class="col order-lg-3">
+      <div class="movie-poster d-lg-none">
+        <img data-bind="attr:{src: omdbData.poster, alt: primarytitle}">
+      </div>
+
+      <div class="row">
+        <h1 data-bind="text: primarytitle"></h1>
+      </div>
+
+      <div class="row row-cols-auto">
+        <div class="col">
+          <span class="subtitleDetail imdbrating" data-bind="text: imdbRating.averagerating"></span>
+        </div>
+        <div class="col">
+          <span class="subtitleDetail"><span data-bind="text: runtimeminutes"></span> min</span>
+        </div>
+        <div class="col">
+          <span class="subtitleDetail" data-bind="text: startyear"></span>
+        </div>
+        <div class="col">
+          <span class="subtitleDetail"><i style="color: #212529; cursor: pointer; font-size: 25px; margin: 0px 0px 0px 0px;" class="bi bi-bookmark-fill" data-bind="click: $parent.addBookmark"></i></span>
+        </div>
+        <div class="col">
+          <input type="radio" name="stars" id="rating-1" />
+          <input type="radio" name="stars" id="rating-2" />
+          <input type="radio" name="stars" id="rating-3" />
+          <input type="radio" name="stars" id="rating-4" />
+          <input type="radio" name="stars" id="rating-5" />
+          <input type="radio" name="stars" id="rating-6" />
+          <input type="radio" name="stars" id="rating-7" />
+          <input type="radio" name="stars" id="rating-8" />
+          <input type="radio" name="stars" id="rating-9" />
+          <input type="radio" name="stars" id="rating-10" />
+
+          <section class="rating-stars">
+            <label for="rating-1">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-2">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-3">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-4">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-5">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-6">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-7">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-8">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-9">
+              <i class="fas fa-star"></i>
+            </label>
+            <label for="rating-10">
+              <i class="fas fa-star"></i>
+            </label>
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <h2>Summary</h2>
+        </div>
+        <div class="row pe-0">
+          <p class="lbg" data-bind="text: omdbData.plot"></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <h2>Awards</h2>
+        </div>
+        <div class="row pe-0">
+          <p class="lbg" data-bind="text: omdbData.awards"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 order-lg-9">
+      <div class="movie-poster d-none d-lg-block">
+        <img data-bind="attr:{src: omdbData.poster, alt: primarytitle}">
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <h2>Genres</h2>
+        </div>
+        <div class="row lbg">
+          <ul class="movie-genres" data-bind="foreach: genreList">
+            <li data-bind="text: name"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <h2>Cast</h2>
+        </div>
+        <div class="row lbg">
+          <ul class="movie-cast" data-bind="foreach: $parent.actors">
+            <li>
+              <div class="movie-cast-member" data-bind="click: $parents[1].navigateToActor">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="movie-cast-member-img" style="background-color: #e7e7e7;"></div>
+                  </div>
+                  <div class="col movie-cast-member-name">
+                    <div class="row">
+                      <span class="name" data-bind="text: primaryname"></span>
+                    </div>
+                    <!-- <div class="row">
+                      <span class="character"></span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

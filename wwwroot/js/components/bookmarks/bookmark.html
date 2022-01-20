@@ -1,0 +1,40 @@
+<h1>
+	bookmarks:
+</h1>
+
+
+
+<p style="width:25%; overflow-wrap: normal;" data-bind="text: token()"></p>
+<p style="width:25%; overflow-wrap: normal;" data-bind="text: userName()"></p>
+<p style="width:25%; overflow-wrap: normal;" data-bind="text: uconst()"></p>
+<p style="width:25%; overflow-wrap: normal;" data-bind="text: loggedInUser().email"></p>
+
+
+    <table class="table">
+        <thead>
+            <tr><th>User</th><th>Movie</th><th></th></tr>
+        </thead>
+        <tbody data-bind="foreach: bookmarks">
+            <tr>
+                <td data-bind="text: uconst"></td>
+                <td data-bind="text: tconst"></td>
+	            <td><button class="btn btn-dark btn-dark" data-bind="click: $parent.navigateToMovie">Goto</button></td>
+                <td><button class="btn btn-danger btn-sm" data-bind="click: $parent.deltitle">Del</button></td>
+
+            </tr>
+        </tbody>
+        <thead>
+            <tr><th>User</th><th>Actor</th><th></th></tr>
+        </thead>
+        <tbody data-bind="foreach: actorbookmarks">
+            <tr>
+                <td data-bind="text: uconst"></td>
+                <td data-bind="text: nconst"></td>
+	            <td><button class="btn btn-dark btn-dark" data-bind="click: $parent.navigateToActor">Goto</button></td>
+                <td><button class="btn btn-danger btn-sm" data-bind="click: $parent.delactor">Del</button></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</h2>

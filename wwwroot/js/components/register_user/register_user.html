@@ -1,0 +1,48 @@
+﻿
+  <div class="regcontainer" style="width: 100%; text-align: -webkit-center; ">
+    
+  
+    <div class="col-lg-6 col-10" style="text-align: left;">
+      <h4>Register new user</h4>
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Username</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username"
+          data-bind="value: userName">
+      </div>
+      
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email"
+          data-bind="value: email">
+      </div>
+      
+
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Password</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password"
+          data-bind="value: password">
+      </div>
+      
+
+
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Birthdate</label>
+        <input type="datetime-local" class="form-control" id="formGroupExampleInput2" placeholder="Birthdate"
+          data-bind="value: birthdate">
+      </div>
+      
+
+ 
+      <div class="d-grid gap-2">
+        <button id="loginbtn" class="btn btn-primary" type="button" data-bind="click: registerUser">Login</button>
+        <div id="loading" style="display: none; justify-self: center;" class="spinner-border" role="status">
+          <span ></span>
+        </div>
+        <p style=" text-align: center; color: #0b6efd; cursor: pointer;" data-bind="click: goBackToLogin"><u>Go back to login</u></p>
+      </div>
+    </div>
+  </div>
+

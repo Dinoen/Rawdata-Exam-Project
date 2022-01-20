@@ -1,0 +1,40 @@
+﻿
+  
+        <!-- <p data-bind="text: movies().results[0].primarytitle"></p> -->
+   
+  <!-- <table class="table">
+        <thead>
+            <tr><td>title</td></tr>
+        </thead>
+        
+        <tbody data-bind="foreach: movies().results">
+            <tr>
+                <td data-bind="text: primarytitle"></td>
+            
+            </tr>
+        </tbody>
+    </table>-->
+
+
+
+
+       <h2>All Movies</h2>
+
+
+           <div id="status" class="error"> </div>
+
+           <table class="table">
+               <thead>
+                   <tr><td>title</td> <td>primary title</td><td>number of ratings</td> <td>rating</td></tr>
+               </thead>
+               <tr>
+               <tbody data-bind="foreach: movies().results">
+               <td data-bind="text: primarytitle"></td>
+               <td data-bind="text: originaltitle"></td>
+               <td data-bind="text: imdbRating.numvotes"></td>
+               <td data-bind="text: imdbRating.averagerating"></td>
+               
+               <td><button class="btn btn-dark btn-dark" data-bind="click: $parent.goToTitleDetails">Goto</button></td>
+               </tbody>
+               </tr>
+           </table>

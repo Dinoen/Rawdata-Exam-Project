@@ -1,0 +1,18 @@
+﻿<button class="btn btn-primary" data-bind="click: create">Add Category</button>
+
+
+<table class="table">
+    <thead>
+        <tr><th>Url</th><th>Name</th><th>Description</th><th></th></tr>
+    </thead>
+    <tbody data-bind="foreach: categories">
+        <tr>
+            <td data-bind="text: url"></td>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: description"></td>
+            <td><button class="btn btn-danger btn-sm" data-bind="click: $parent.del">Del</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!--<add-category></add-category>-->

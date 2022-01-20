@@ -1,0 +1,26 @@
+﻿
+  <div class="logincontainer" style="width: 100%; text-align: -webkit-center; ">
+    
+    <img src="../../../assets/icon.png" alt="" width="25%" style="margin-top: -15rem;">
+  
+    <div class="col-lg-6 col-10" style="text-align: left;">
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Username</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email"
+          data-bind="value: userName">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Password</label>
+        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password"
+          data-bind="value: password">
+      </div>
+      <div class="d-grid gap-2">
+        <button id="loginbtn" class="btn btn-primary" type="button" data-bind="click: login">Login</button>
+        <div id="loading" style="display: none; justify-self: center;" class="spinner-border" role="status">
+          <span ></span>
+        </div>
+        <p style=" text-align: center; color: #0b6efd; cursor: pointer;" data-bind="click: registerUser"><u>Register new user</u></p>
+      </div>
+    </div>
+  </div>
+

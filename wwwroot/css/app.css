@@ -1,0 +1,399 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+/* Nav Bar Start */
+.bi{
+  color: blue;
+  font-size: 30px;
+  margin: 0px 0px 0px 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar{
+  background-color: #3a3a3a !important;
+}
+
+/* Register User */
+.regcontainer{
+  width: 100px;
+  height: 100px;
+  margin-top: 3rem;
+}
+
+
+/* Login */
+
+.logincontainer{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+body{
+  font-family: 'Varela Round', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+h2 small {
+  color: #38393f70;
+  font-size: 0.7em;
+}
+
+.movie-carousel-container {
+  position: relative;
+}
+
+.movie-carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.movie-carousel .movie-carousel-rail {
+  white-space: nowrap;
+}
+
+.movie-carousel-changepage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+  text-shadow: 1px 0px 12px rgba(0,0,0,.4);
+  font-size: 62px;
+  cursor: pointer;
+}
+
+.movie-carousel-changepage.left {
+  left: -100px;
+}
+
+.movie-carousel-changepage.right {
+  right: -100px;
+}
+
+.movie-carousel .movie-poster {
+  cursor: pointer;
+}
+
+.movie-poster {
+  display: inline-block;
+  height: 375px;
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 7px 20px 0px rgb(0 0 0 / 7%);
+  /* transition: all cubic-bezier(0,1,0,1) 500ms; */
+  padding: 0;
+  margin-right: 10px;
+}
+
+.movie-poster img {
+  height: inherit;
+  width: inherit;
+}
+
+.movie-details {
+  padding: 0 20px;
+}
+
+.movie-details h1 {
+  margin: 22px 0;
+  font-size: 2em;
+}
+
+.movie-details h2 {
+  margin: 50px 0 22px 0;
+  font-size: 1.6em;
+}
+
+.movie-heroimg {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.subtitleDetail {
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.certification {
+  display: inline-block;
+  padding: 0px 10px;
+  height: 25px;
+  color: #38393f70;
+  background-color: #e3e4e6;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.imdbrating:before {
+  content: '';
+  display: inline-block;
+  background-image: url('/assets/imdb.svg');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 52px;
+  height: 25px;
+  margin-top: -4px;
+}
+
+#ytplayer {
+  max-width: 640px;
+}
+
+.lbg {
+  background-color: #f4f5fb;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.movie-genres {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-genres li {
+  display: inline-block;
+  padding: 4px 7px;
+  color: #38393f70;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 5px 10px rgb(21 57 130 / 5%);
+  line-height: 20px;
+}
+
+.movie-details > div:first-child {
+  margin-top: -175px;
+}
+
+.movie-cast {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.movie-cast-member {
+  display: block;
+  padding: 7px 14px;
+  color: #38393f70;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgb(21 57 130 / 5%);
+  /* transition: cubic-bezier(0, 1, 0, 1) 750ms; */
+}
+
+.movie-cast-member .movie-cast-member-img {
+  /* display: inline-block; */
+  height: 52px;
+  width: 52px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 14px;
+  vertical-align: middle;
+  border: 2px solid #ecedf2;
+}
+
+.movie-cast-member .movie-cast-member-name {
+  padding-top: 7px;
+}
+
+.movie-cast-member .movie-cast-member-name span {
+  line-height: 18px;
+}
+
+.movie-cast-member .movie-cast-member-name .name {
+  font-weight: 700;
+  color: var(--bs-gray-900);
+}
+
+.movie-cast-member .movie-cast-member-name .character {
+  color: #38393f70;
+}
+
+.actor-professions {
+  font-size: 1.2em;
+  color: #38393f70;
+}
+
+@media (max-width: 450px) {
+  .movie-carousel .movie-poster {
+    height: 222px;
+    width: 150px;
+    margin-right: 5px;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .movie-details {
+    padding: 0 100px;
+  }
+
+  .movie-heroimg {
+    border-radius: 8px;
+  }
+
+  .movie-details > div:first-child {
+    margin-top: 0;
+  }
+
+  .movie-details > div:nth-child(2) {
+    margin-top: -175px;
+  }
+
+  .movie-details > div:nth-child(2) h2 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+}
+
+/* Profile */
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
+.gutters-sm {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.mb-3, .my-3 {
+  margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0;
+}
+.h-100 {
+  height: 100%!important;
+}
+.shadow-none {
+  box-shadow: none!important;
+}
+
+.rating-stars {
+  cursor: default;
+  color: #e2e8f0;
+}
+
+input[name="stars"] {
+  display: none;
+}
+
+#rating-1:checked ~ section [for=rating-1],
+#rating-2:checked ~ section [for=rating-1],
+#rating-2:checked ~ section [for=rating-2],
+#rating-3:checked ~ section [for=rating-1],
+#rating-3:checked ~ section [for=rating-2],
+#rating-3:checked ~ section [for=rating-3],
+#rating-4:checked ~ section [for=rating-1],
+#rating-4:checked ~ section [for=rating-2],
+#rating-4:checked ~ section [for=rating-3],
+#rating-4:checked ~ section [for=rating-4],
+#rating-5:checked ~ section [for=rating-1],
+#rating-5:checked ~ section [for=rating-2],
+#rating-5:checked ~ section [for=rating-3],
+#rating-5:checked ~ section [for=rating-4],
+#rating-5:checked ~ section [for=rating-5],
+#rating-6:checked ~ section [for=rating-1],
+#rating-6:checked ~ section [for=rating-2],
+#rating-6:checked ~ section [for=rating-3],
+#rating-6:checked ~ section [for=rating-4],
+#rating-6:checked ~ section [for=rating-5],
+#rating-6:checked ~ section [for=rating-6],
+#rating-7:checked ~ section [for=rating-1],
+#rating-7:checked ~ section [for=rating-2],
+#rating-7:checked ~ section [for=rating-3],
+#rating-7:checked ~ section [for=rating-4],
+#rating-7:checked ~ section [for=rating-5],
+#rating-7:checked ~ section [for=rating-6],
+#rating-7:checked ~ section [for=rating-7],
+#rating-8:checked ~ section [for=rating-1],
+#rating-8:checked ~ section [for=rating-2],
+#rating-8:checked ~ section [for=rating-3],
+#rating-8:checked ~ section [for=rating-4],
+#rating-8:checked ~ section [for=rating-5],
+#rating-8:checked ~ section [for=rating-6],
+#rating-8:checked ~ section [for=rating-7],
+#rating-8:checked ~ section [for=rating-8],
+#rating-9:checked ~ section [for=rating-1],
+#rating-9:checked ~ section [for=rating-2],
+#rating-9:checked ~ section [for=rating-3],
+#rating-9:checked ~ section [for=rating-4],
+#rating-9:checked ~ section [for=rating-5],
+#rating-9:checked ~ section [for=rating-6],
+#rating-9:checked ~ section [for=rating-7],
+#rating-9:checked ~ section [for=rating-8],
+#rating-9:checked ~ section [for=rating-9],
+#rating-10:checked ~ section [for=rating-1],
+#rating-10:checked ~ section [for=rating-2],
+#rating-10:checked ~ section [for=rating-3],
+#rating-10:checked ~ section [for=rating-4],
+#rating-10:checked ~ section [for=rating-5],
+#rating-10:checked ~ section [for=rating-6],
+#rating-10:checked ~ section [for=rating-7],
+#rating-10:checked ~ section [for=rating-8],
+#rating-10:checked ~ section [for=rating-9],
+#rating-10:checked ~ section [for=rating-10] {
+  color: #f5ca46;
+}

@@ -1,0 +1,20 @@
+﻿<div class="container-lg p-0 mt-5">
+  <h1 data-bind="text: actorToBeShown().primaryname"></h1>
+  <div class="actor-professions" data-bind="foreach: { data: actorProfessions(), as: 'profession' }">
+    <span class="actor-profession lbg" data-bind="text: profession"></span>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col movie-carousel-container"">
+      <h2>Known for</h2>
+      <div class="movie-carousel">
+        <div class="movie-carousel-rail" data-bind="foreach: actorTitles()">
+          <div class="movie-poster" data-bind="click: $parent.goToTitleDetails">
+            <img data-bind="attr:{src: omdbData.poster, alt: primarytitle}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

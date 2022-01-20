@@ -1,0 +1,12 @@
+﻿<div class="container-lg p-0 mt-5">
+  <div class="row">
+    <div class="col p-0 movie-carousel-container"">
+    <h2>Matching titles <small>(<span data-bind=" text: searchResults().length"></span>)</small></h2>
+      <div class="movie-carousel" data-bind="foreach: searchResults()">
+        <div class="movie-poster" data-bind="click: $parent.goToTitleDetails">
+          <img data-bind="attr:{src: omdbData.poster, alt: primarytitle}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

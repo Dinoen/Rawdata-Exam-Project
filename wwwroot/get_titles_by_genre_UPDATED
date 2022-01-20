@@ -1,0 +1,22 @@
+CREATE OR REPLACE FUNCTION "public"."get_titles_by_genre"("gid" int4, "page" int4, "pagesize" int4)
+  RETURNS TABLE("tconst" bpchar, "endyear" bpchar, "isadult" bool, "originaltitle" text, "primarytitle" text, "runtimeminutes" int4, "startyear" bpchar, "titletype" varchar, "poster" varchar, "awards" text, "plot" text) AS $BODY$
+BEGIN
+	RETURN QUERY(
+		SELECT t.tconst, t.endyear, t.isadult, t.originaltitle, t.primarytitle, t.runtimeminutes, t.startyear, t.titletype, omdb_data.poster, omdb_data.awards, omdb_data.plot
+      FROM title_basics AS t
+			INNER JOIN omdb_data ON omdb_data.tconst = t.tconst
+      LEFT JOIN (
+          SELECT t0.tconst, t0.genreid, g.id, g.name
+          FROM title_genre AS t0
+          INNER JOIN genre AS g ON t0.genreid = g.id
+      ) AS t1 ON t.tconst = t1.tconst
+			WHERE t1.genreid = gid
+			ORDER BY t.tconst, t1.tconst, t1.genreid, t1.id
+			OFFSET page * pagesize
+			LIMIT pagesize
+		);
+	END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100
+  ROWS 1000;

@@ -1,0 +1,107 @@
+<div class="container">
+  <div style="margin-top: 20px; text-align: center; ">
+
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <!-- <img src="../../../assets/person.svg" alt="Admin" class="rounded-circle" -->
+              <img src="https://media-exp3.licdn.com/dms/image/C4D03AQHH3dg6_7s1Sw/profile-displayphoto-shrink_100_100/0/1621618880495?e=2159024400&v=beta&t=kjgwqtF79gkl4ZRj9S767aI8yC_lfeNqeB3mwUiXakc" alt="Admin" class="rounded-circle"
+                width="150">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h4 class="d-flex align-items-center mb-3" style="justify-content: center;">User Information</h4>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">User Name</h6>
+              </div>
+              <div class="col-sm-9 text-secondary" data-bind="text: loggedInUser().userName, visible: !editMode()"></div>
+              <div class="col-sm-9 text-secondary" data-bind="visible: editMode()">
+                <input type="text" class="form-control col-sm-9" id="formGroupExampleInput2" placeholder="Username" data-bind="value: loggedInUser().userName">
+              </div>
+               
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary" data-bind="text: loggedInUser().email , visible: !editMode()"></div>
+              <div class="col-sm-9 text-secondary" data-bind="visible: editMode()">
+                <input type="text" class="form-control col-sm-9" id="formGroupExampleInput2" placeholder="Username" data-bind="value: loggedInUser().email">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Birthdate</h6>
+              </div>
+              <div class="col-sm-9 text-secondary" data-bind="text: loggedInUser().birthdate , visible: !editMode()"></div>
+              <div class="col-sm-9 text-secondary" data-bind="visible: editMode()">
+                <input type="datetime-local" class="form-control col-sm-9" id="formGroupExampleInput2" placeholder="Username" data-bind="value: loggedInUser().birthdate">
+              </div>
+            </div>
+            
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">User Id</h6>
+              </div>
+              <div class="col-sm-9 text-secondary" data-bind="text: loggedInUser().uconst"></div>
+            </div>
+            <hr>
+            <div class="row" data-bind="visible: editMode()">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Password</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <input type="text" class="form-control col-sm-9" id="formGroupExampleInput2" placeholder="Password" data-bind="value: loggedInUser().password">
+                <small class="mb-0">Be carefull when changing your password</small>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <button id="editbtn" class="btn btn-primary" type="button" data-bind="click: editUser, visible: !editMode()">Edit information</button>
+
+              <button id="editbtn" class="btn btn-primary" type="button" data-bind="click: updateUser, visible: editMode()">Save and update</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gutters-sm">
+          <div class="col-sm-12 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="d-flex align-items-center mb-3" style="justify-content: center;">Search History</h4>
+                <table class="table" style="text-align: left;">
+                  <thead>
+                      <tr>
+                        <th>Search Id</th>
+                        <th>Query</th>
+                      </tr>
+                  </thead>
+                  <tbody data-bind="foreach: searchHistory">
+                      <tr>
+                          <td data-bind="text: searchId"></td>
+                          <td data-bind="text: query"></td>
+                          <!-- <td><button class="btn btn-danger btn-sm" data-bind="click: $parent.deltitle">Del</button></td> -->
+                      </tr>
+                  </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
