@@ -11,6 +11,12 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Raw5MovieDb_WebApi.Controllers
+
+//Denne klasse gør det muligt at binde vores C# objekter med information fra databasen sammen med en url
+//som ses herunder fx api/actors
+
+//længere nede specificerer vi så de forskellige variationer af ting på actors via httpget:
+//
 {
     [Route("api/actors")]
     [ApiController]

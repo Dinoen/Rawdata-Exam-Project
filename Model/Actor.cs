@@ -1,16 +1,23 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations; //Provides attribute classes that are used to
+                                             //define metadata for ASP.NET MVC and ASP.NET
+                                             //data controls.
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
-using Newtonsoft.Json;
+using Newtonsoft.Json; //Newtonsoft er den package som gør at vi kan arbejde med JSON
 using Newtonsoft.Json.Converters;
+
+//NuGet er en package manager
+
 
 namespace Raw5MovieDb_WebApi.Model
 {
     public class Actor
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        //JsonProperty fortæller JsonSerializeren at Nconst skal hedde nconst når den converteres 
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         [JsonProperty("nconst")]
         public string Nconst { get; set; }
 

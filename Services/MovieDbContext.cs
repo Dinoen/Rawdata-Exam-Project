@@ -8,10 +8,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Text;
 
+
+// Her har vi en klasse som er vores bindepunkt imellem databasen og vores backend 
+//Det vil sige at denne klasse bruger vores "model" objekter til at få dataen ind fra databasen
 namespace Raw5MovieDb_WebApi.Services
 {
     public class MovieDbContext : DbContext
-    {
+    { 
+        //her definerer vi nogle "DbSet" som stemmer overens med tables i databasen
+
         public DbSet<Actor> actors { get; set; }
         //public DbSet<AppSettings> appSettings { get; set; }
         public DbSet<BookmarkActor> bookmarkActors { get; set; }
@@ -28,6 +33,7 @@ namespace Raw5MovieDb_WebApi.Services
         public DbSet<UserRating> userRatings { get; set; }
         public DbSet<UserSearchHistory> userSearchHistories { get; set; }
 
+        //Herunder configurere vi hvilken database der skal tages fra og hvilke logon informationer skal bruges
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -41,12 +47,13 @@ namespace Raw5MovieDb_WebApi.Services
         }
 
 
-
+        //Herunder laver vi vores "model" altså modellen i MVC. ModelBuilder bygger en model...//
+        //Det her er EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-
+            //Her binder vi vores kolonner i et table til variabler i vores Actor klasses objekt
             modelBuilder.Entity<Actor>().ToTable("name_basics");
             modelBuilder.Entity<Actor>().Property(x => x.Nconst).HasColumnName("nconst");
             modelBuilder.Entity<Actor>().Property(x => x.Primaryname).HasColumnName("primaryname");

@@ -10,7 +10,9 @@ namespace Raw5MovieDb_WebApi.Services
     public class DataService : IDataService
     {
 
-        //TODO Clean up data service
+        //Det her er vores dataservice, hvor vi bruger vores MovieDbConext (herunder ctx)¨
+        //De funktioner som vi definerer her, henter via LINQ data fra databasen og leverer fx et BookmarkTitle objekt
+        //med informationen i
 
 
         public IList<BookmarkTitle> GetAllTitleBookmarks(string uconst)

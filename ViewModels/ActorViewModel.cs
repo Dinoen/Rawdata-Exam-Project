@@ -1,6 +1,8 @@
 ﻿using System;
 namespace Raw5MovieDb_WebApi.ViewModels
 {
+
+    //De her klasser er de objekter som bliver sendt videre til webbet via controllerne
     public class ActorViewModel
     {
         public string Nconst { get; set; }

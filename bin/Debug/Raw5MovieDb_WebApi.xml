@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Raw5MovieDb_WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.ActorController.GetActors(Raw5MovieDb_WebApi.Model.QueryString)">
+            <summary>
+            Returns all actors
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.ActorController.GetActor(System.String)">
+            <summary>
+            Return a single actor
+            </summary>
+            <param name="nconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.ActorController.GetActorCoPlayers(System.String)">
+            <summary>
+            Returns a list of actors who have previously worked with the given actor
+            </summary>
+            <param name="actorname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.ActorController.FindActor(System.String)">
+            <summary>
+            Returns an actor matching a search query
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.GetAllUserTitleBookmarks(System.String)">
+            <summary>
+            Returns all movie bookmarks for a single user
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.AddTitleBookmark(System.String,System.String)">
+            <summary>
+            Adds a new title bookmark
+            </summary>
+            <param name="uconst"></param>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.DeleteTitleBookmark(System.String,System.String)">
+            <summary>
+            Deletes a title bookmark
+            </summary>
+            <param name="uconst"></param>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.GetAllUserActorBookmarks(System.String)">
+            <summary>
+            Returns all actor bookmarks for a single user
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.AddActorBookmark(System.String,System.String)">
+            <summary>
+            Adds a new actor bookmark
+            </summary>
+            <param name="uconst"></param>
+            <param name="nconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.BookmarkController.DeleteActorBookmark(System.String,System.String)">
+            <summary>
+            Deletes a title bookmark
+            </summary>
+            <param name="uconst"></param>
+            <param name="nconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.GenreController.GetGenres(Raw5MovieDb_WebApi.Model.QueryString)">
+            <summary>
+            Returns all genres
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.GenreController.GetGenre(System.Int32)">
+            <summary>
+            Returns a single genre
+            </summary>
+            <param name="genreId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.GenreController.GetTitlesByGenre(System.Int32,Raw5MovieDb_WebApi.Model.QueryString)">
+            <summary>
+            Returns all titles matching a given genre
+            </summary>
+            <param name="genreId"></param>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.RatingController.GetAllUserRatings(System.String)">
+            <summary>
+            Returns all Title ratings from a single user
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.RatingController.GetUserTitleRating(System.String,System.String)">
+            <summary>
+            Return user rating for a single title
+            </summary>
+            <param name="uconst"></param>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.RatingController.CreateUserRating(Raw5MovieDb_WebApi.Model.UserRating)">
+            <summary>
+            Adds a new userrating to a title
+            </summary>
+            <param name="rating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.RatingController.UpdateUserRating(Raw5MovieDb_WebApi.Model.UserRating)">
+            <summary>
+            Updates a single user rating
+            </summary>
+            <param name="rating"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.SearchHistoryController.GetSearchHistory(System.String)">
+            <summary>
+            Returns searchhistory for a single user
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.SearchHistoryController.CreateSearchHistoryEntry(System.String,System.String)">
+            <summary>
+            Adds a searchhistory entry in the database
+            </summary>
+            <param name="uconst"></param>
+            <param name="searchParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.GetTitles(Raw5MovieDb_WebApi.Model.QueryString)">
+            <summary>
+            Returns all titles
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.GetTitle(System.String)">
+            <summary>
+            Returns a single title with details
+            </summary>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.GetSimilar(System.String)">
+            <summary>
+            Returns titles that are similar to a given title
+            </summary>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.GetPopularTitles">
+            <summary>
+            Returns the most popular/highest rated titles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.FindTitle(System.String)">
+            <summary>
+            Returns a list of titles matching the search query (basic search)
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.FindTitleWordToWord(System.String[])">
+            <summary>
+            Returns a list of titles matching the search query/queryies (advanced search)
+            </summary>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.TitleController.GetTitleActors(System.String)">
+            <summary>
+            Returns the actors of a given title
+            </summary>
+            <param name="tconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.UserController.GetAllUsers">
+            <summary>
+            Returns all user accounts present in the database
+            </summary>
+            <returns>201</returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.UserController.GetUser(System.String)">
+            <summary>
+            Returns a single user
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.UserController.RegisterUser(Raw5MovieDb_WebApi.Model.UserAccount)">
+            <summary>
+            Registers a new user account in the database
+            </summary>
+            <param name="newUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.UserController.DeleteUser(System.String)">
+            <summary>
+            Deletes a single user account
+            </summary>
+            <param name="uconst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Raw5MovieDb_WebApi.Controllers.UserController.UpdateUser(Raw5MovieDb_WebApi.Model.UserAccount)">
+            <summary>
+            Updates a single user account
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
